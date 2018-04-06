@@ -44,24 +44,35 @@ $("#submit").on("click", function () {
 });
 
 // Get elements from the database
-database.ref().on("child_added", function(snapshot) {
-  console.log(snapshot.val());
-  
-  var tableRow = $("<tr>");
-  var tableData = $("<td>");
-  
-  snapshot.forEach(function(childSnapshot) {
-    var name = childSnapshot.eName;
-    var role = childSnapshot.eRole;
-    var year = childSnapshot.eYr;
-    var employeeRate = childSnapshot.eRate;
-    var monthlyRate = childSnapshot.mRate;
-    var billed = childSnapshot.totBilled;
 
-    
+var query = firebase.database().ref();
+query.on("child_added", function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      // key will be "ada" the first time and "alan" the second time
+      var key = childSnapshot.key;
+      // childData will be the actual contents of the child
+      var childData = childSnapshot.val();
+      console.log(childData);
   });
-
-  
 });
+
+// database.ref().on("child_added", function(snapshot) {
+//   console.log(snapshot.val());
+  
+//   var tableRow = $("<tr>");
+//   var tableData = $("<td>");
+  
+//   snapshot.forEach(function(childSnapshot) {
+//     var name = childSnapshot.eName;
+//     var role = childSnapshot.eRole;
+//     var year = childSnapshot.eYr;
+//     var employeeRate = childSnapshot.eRate;
+//     var monthlyRate = childSnapshot.mRate;
+//     var billed = childSnapshot.totBilled;
+
+//     console.log(name);
+//     console.log(role);
+//     console.log(year);
+//   });
 
 /*END JAVASCRIPT*/
