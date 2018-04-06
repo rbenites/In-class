@@ -27,11 +27,28 @@ var config = {
 
 
 
-    })
+    });
 
 
 
     
   })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  database.ref().on("child-added", function(snapshot) {
+
+  });
 
 /*END JAVASCRIPT*/
