@@ -44,32 +44,24 @@ $("#submit").on("click", function () {
 });
 
 // Get elements from the database
-database.ref().on("child-added", function(snapshot) {
+database.ref().on("child_added", function(snapshot) {
+  console.log(snapshot.val());
   
-});
+  var tableRow = $("<tr>");
+  var tableData = $("<td>");
+  
+  snapshot.forEach(function(childSnapshot) {
+    var name = childSnapshot.eName;
+    var role = childSnapshot.eRole;
+    var year = childSnapshot.eYr;
+    var employeeRate = childSnapshot.eRate;
+    var monthlyRate = childSnapshot.mRate;
+    var billed = childSnapshot.totBilled;
 
+    
+  });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-database.ref().on("child-added", function (snapshot) {
-
+  
 });
 
 /*END JAVASCRIPT*/
