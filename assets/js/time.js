@@ -50,15 +50,15 @@ var config = {
     
 function results() {
   var table = $("<table class='table'>");
-  var tblHD =  $("<thead>");
+  var tblHD = $("<thead>");
   var tr = $("<tr>");
   for (var i = 0; i < headings.length; i++) {
-  var th = $("<th scope='col'>");
-  th.text(headings[i]);
-  tr.append(th);
-  console.log("hththt");
-}
-tblHD.append(tr);
+    var th = $("<th scope='col'>");
+    th.text(headings[i]);
+    tr.append(th);
+    console.log("hththt");
+  }
+  tblHD.append(tr);
   table.append(tblHD);
   $(".tableResults").html(table);
   console.log(table);
