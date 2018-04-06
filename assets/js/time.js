@@ -16,6 +16,7 @@ var config = {
     var eRate = "";
     var mRate = "";
     var totBilled = "";
+    var nowDate = Date.now();
 
   $("#submit").on("click", function (){
     event.preventDefault();
@@ -23,7 +24,23 @@ var config = {
     eRole = $("#eRole").val().trim();
     eYr = $("#eYr").val().trim();
     eRate = $("#eRate").val().trim();
+    mRate = nowDate - eYr;
+    totBilled = eRate * mRate;
     
+    
+    database.ref().set({
+      eName: eName,
+      eRole: eRole,
+      eYr: eYr,
+      eRate: eRate,
+      mRate: nowDate - eRate,
+      totBilled: eRate * mRate
+    }, function (errorObject){
+      console.log("Brian made a mistake");
+    });
+
+
+
 
 
 
@@ -32,6 +49,6 @@ var config = {
 
 
     
-  })
+
 
 /*END JAVASCRIPT*/
