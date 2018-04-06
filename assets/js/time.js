@@ -34,40 +34,6 @@ var config = {
     console.log("Brian made a mistake");
   });
 
-// Get elements from the database
-
-var query = firebase.database().ref();
-query.on("child_added", function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      // key will be "ada" the first time and "alan" the second time
-      var key = childSnapshot.key;
-      // childData will be the actual contents of the child
-      var childData = childSnapshot.val();
-
-      key = childData;
-
-      results(key);
-  });
-});
-
-// database.ref().on("child_added", function(snapshot) {
-//   console.log(snapshot.val());
-  
-//   var tableRow = $("<tr>");
-//   var tableData = $("<td>");
-  
-//   snapshot.forEach(function(childSnapshot) {
-//     var name = childSnapshot.eName;
-//     var role = childSnapshot.eRole;
-//     var year = childSnapshot.eYr;
-//     var employeeRate = childSnapshot.eRate;
-//     var monthlyRate = childSnapshot.mRate;
-//     var billed = childSnapshot.totBilled;
-
-//     console.log(name);
-//     console.log(role);
-//     console.log(year);
-//   });
 
   $("#submit").on("click", function (){
     event.preventDefault();
@@ -93,6 +59,20 @@ query.on("child_added", function(snapshot) {
 
   });
 
+
+  var query = firebase.database().ref();
+query.on("child_added", function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      // key will be "ada" the first time and "alan" the second time
+      var key = childSnapshot.key;
+      // childData will be the actual contents of the child
+      var childData = childSnapshot.val();
+
+      key = childData;
+
+      results(key);
+  });
+});
     
 function results() {
   var table = $("<table class='table'>");
