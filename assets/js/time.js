@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 /*:::::::::::::DOM CACHE:::::::::::*/
 var headings = ["Employee Name", "Role","Start Date", "Months Worked","Monthly Rate ($)"," Total Billed ($)" ];
-
+console.log("fhdhfdk");
 /* BEGIN JAVASCRIPT*/
 var config = {
 
@@ -62,8 +62,6 @@ tblHD.append(tr);
   table.append(tblHD);
   $(".tableResults").html(table);
   console.log(table);
-
-  
  }
  results();
 /*END JAVASCRIPT*/
