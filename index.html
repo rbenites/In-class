@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 <link rel="stylesheet" href="style.css">
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 <title>Employee Timesheet</title>
 </head>
 <body class="pb-5">
@@ -17,7 +16,8 @@
             <div class="row">
               <div class="col-12 d-flex justify-content-center py-4  bg-secondary text-white">
                 <h1>
-                  <i class="fa fa-newspaper"></i>Employee Management</h1>
+                  <i class="fa fa-newspaper"></i>Employee Data Management</h1>
+                  <p>A Comprehensive Directory of Employee Billable Hours</p>
               </div>
             </div>
           </div>
@@ -29,15 +29,17 @@
             
                         <div class="card mb-3">
                             <h5 class="card-header bg-secondary text-white">
-                              <i class="fa fa-newspaper"></i>Timetable</h5>
+                              <i class="fa fa-newspaper"></i>Current Employees</h5>
                             <div class="card-body">
                                     <table class="table">
                                             <thead>
                                               <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">First</th>
-                                                <th scope="col">Last</th>
-                                                <th scope="col">Handle</th>
+                                                <th scope="col">Employee Name</th>
+                                                <th scope="col">Role</th>
+                                                <th scope="col">Start Date</th>
+                                                <th scope="col">Months Worked</th>
+                                                <th scope="col">Monthly Rate ($)</th>
+                                                <th scope="col">Total Billed ($)</th>
                                               </tr>
                                             </thead>
                                             <tbody>
@@ -45,6 +47,8 @@
                                                 <th scope="row">1</th>
                                                 <td>Mark</td>
                                                 <td>Otto</td>
+                                                <td>@mdo</td>      
+                                                 <td>Otto</td>
                                                 <td>@mdo</td>
                                               </tr>
                                               <tr>
@@ -52,12 +56,16 @@
                                                 <td>Jacob</td>
                                                 <td>Thornton</td>
                                                 <td>@fat</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
                                               </tr>
                                               <tr>
                                                 <th scope="row">3</th>
                                                 <td>Larry</td>
                                                 <td>the Bird</td>
                                                 <td>@twitter</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
                                               </tr>
                                             </tbody>
                                           </table>
@@ -74,24 +82,24 @@
               <div class="col-12 px-0">
                 <div class="card">
                   <h5 class="card-header bg-secondary text-white">
-                    <i class="fa fa-newspaper"></i>Search Parameters</h5>
+                    <i class="fa fa-newspaper"></i>Add Employee</h5>
                   <div class="card-body">
                     <form>
                       <div class="form-group">
-                        <label for="inputST">Search Terms</label>
-                        <input type="text" class="form-control" id="searchTerm" placeholder="Ex: Obama and Chipmunks">
+                        <label for="inputST">Employee Name</label>
+                        <input type="text" class="form-control" id="eName" placeholder="Ex: Obama and Chipmunks">
                       </div>
                       <div class="form-group">
-                        <label for="inputRcrd">Number of Records To Retrieve</label>
-                        <input type="text" class="form-control" id="inputRcrd" placeholder="4">
+                        <label for="inputRcrd">Role</label>
+                        <input type="text" class="form-control" id="eRole" placeholder="Cool Man">
                       </div>
                       <div class="form-group">
-                        <label for="inputYr">Start Year</label>
-                        <input type="text" class="form-control" id="inputYr" placeholder="1989">
+                        <label for="inputYr">Start Date (DD/MM/YY? - ex:0 1/01/89)</label>
+                        <input type="date" class="form-control" id="eYr" placeholder="1989">
                       </div>
                       <div class="form-group">
-                        <label for="inputEnYr">End Year</label>
-                        <input type="text" class="form-control" id="inputEnYr" placeholder="">
+                        <label for="inputEnYr">Monthly Rates</label>
+                        <input type="number" class="form-control" id="eRate" placeholder="">
                       </div>
       
                       <button id="submit" type="submit" class="btn btn-primary bg-secondary border-secondary">Search</button>
@@ -111,6 +119,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
-=======
 <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
->>>>>>> af837a01cf7e29013cc7a8636a103d405331158d
+
