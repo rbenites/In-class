@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
   <title>Employee Timesheet</title>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <title>Employee Timesheet</title>
 </head>
 
 <body class="pb-5">
@@ -29,56 +32,17 @@
     <div class="container">
       <div class="row">
         <div class="col-12 px-0">
-
           <div class="card mb-3">
             <h5 class="card-header bg-secondary text-white">
               <i class="fa fa-newspaper"></i>Current Employees</h5>
             <div class="card-body tableResults">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Employee Name</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">Months Worked</th>
-                    <th scope="col">Monthly Rate ($)</th>
-                    <th scope="col">Total Billed ($)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                </tbody>
-              </table>
+    
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <section id="form">
     <div class="container">
       <div class="row">
@@ -104,7 +68,6 @@
                   <label for="inputEnYr">Monthly Rates</label>
                   <input type="number" class="form-control" id="eRate" placeholder="25,000">
                 </div>
-
                 <button id="submit" type="submit" class="btn btn-primary bg-secondary border-secondary">Search</button>
                 <button id="clear" type="submit" class="btn btn-primary bg-secondary border-secondary">Clear Results</button>
               </form>
@@ -113,15 +76,12 @@
         </div>
       </div>
     </div>
-
+    </div>
   </section>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
   <script src="assets/js/time.js"></script>
-
 </body>
-
 </html>
