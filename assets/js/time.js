@@ -10,14 +10,20 @@ var config = {
   firebase.initializeApp(config);
 
   var database = firebase.database();
-    var inputST = "";
+    var eName = "";
     var eRole = "";
     var eYr = "";
     var eRate = "";
+    var mRate = "";
+    var totBilled = "";
 
   $("#submit").on("click", function (){
     event.preventDefault();
-    database.ref().on("value", function(snapshot){
+    eName = $("#eName").val().trim();
+    eRole = $("#eRole").val().trim();
+    eYr = $("#eYr").val().trim();
+    eRate = $("#eRate").val().trim();
+    
 
 
 
