@@ -1,7 +1,9 @@
 /*jshint esversion: 6 */
+/*:::::::::::::DOM CACHE:::::::::::*/
+var headings = ["Employee Name", "Role", "Start Date", "Months Worked", "Monthly Rate ($)", " Total Billed ($)"];
+
 /* BEGIN JAVASCRIPT*/
 var config = {
-
   apiKey: "AIzaSyDiG1XYSQGN1t2PLA5hdlXdJsuwal2Mo44",
   authDomain: "timecard-database.firebaseapp.com",
   databaseURL: "https://timecard-database.firebaseio.com",
@@ -74,5 +76,25 @@ query.on("child_added", function(snapshot) {
 //     console.log(role);
 //     console.log(year);
 //   });
+
+
+function results() {
+  var table = $("<table class='table'>");
+  var tblHD = $("<thead>");
+  var tr = $("<tr>");
+  for (var i = 0; i < headings.length; i++) {
+    var th = $("<th scope='col'>");
+    th.text(headings[i]);
+    tr.append(th);
+    console.log("hththt");
+  }
+  tblHD.append(tr);
+  table.append(tblHD);
+  $(".tableResults").html(table);
+  console.log(table);
+
+
+}
+results();
 
 /*END JAVASCRIPT*/
