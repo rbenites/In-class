@@ -5,6 +5,7 @@ var headings = ["Employee Name", "Role","Start Date", "Months Worked","Monthly R
 /* BEGIN JAVASCRIPT*/
 var config = {
 
+
     apiKey: "AIzaSyDiG1XYSQGN1t2PLA5hdlXdJsuwal2Mo44",
     authDomain: "timecard-database.firebaseapp.com",
     databaseURL: "https://timecard-database.firebaseio.com",
@@ -66,4 +67,5 @@ tblHD.append(tr);
   
  }
  results();
+
 /*END JAVASCRIPT*/
