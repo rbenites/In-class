@@ -9,4 +9,23 @@ var config = {
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
+    var inputST = "";
+    var eRole = "";
+    var eYr = "";
+    var eRate = "";
+
+  $("#submit").on("click", function (){
+    event.preventDefault();
+    database.ref().on("value", function(snapshot){
+
+
+
+    })
+
+
+
+    
+  })
+
 /*END JAVASCRIPT*/
