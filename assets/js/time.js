@@ -46,7 +46,7 @@ $("#submit").on("click", function (event) {
   // mRate = nowDate - eYr;
   // totBilled = eRate * mRate;
 
-  database.ref('employees').push({
+  database.ref().push({
     eName: eName,
     eRole: eRole,
     eYr: eYr,
@@ -74,29 +74,16 @@ $("#submit").on("click", function (event) {
 
 // });
 
+database.ref().on("child_added", function(childSnapshot) {
+  console.log(childSnapshot.val().eName);
+  console.log(childSnapshot.val().eRole);
+  console.log(childSnapshot.val().eYr);
+  console.log(childSnapshot.val().eRate);
 
-var query = firebase.database().ref('employees');
-query.on("child_added", function (snapshot) {
-  snapshot.forEach(function (childSnapshot) {
-    // key will be "ada" the first time and "alan" the second time
-    var key = childSnapshot.key;
-    // childData will be the actual contents of the child
-    var childData = childSnapshot.val();
 
-    var deName = snapshot.val().eName;
-    var deRate = snapshot.val().eRate;
-    var deRole = snapshot.val().eRole;
-    var deYr = snapshot.val().eYr;
-
-    console.log(deName);
-    console.log(deRate);
-    console.log(deRole);
-    console.log(deYr);
-  });
 });
 
-
-function results() {
+function results(x) {
   var table = $("<table class='table'>");
   var tblHD = $("<thead>");
   var tr = $("<tr>");
